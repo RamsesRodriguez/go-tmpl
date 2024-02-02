@@ -1,5 +1,11 @@
 package hello
 
+import (
+	"go-tmpl/views/layout"
+)
+
 templ ShowHello(name string) {
-	<div>Hello, { name }</div>
+	@layout.Base(){
+		<h1 class="text-xl">Hello, { name } nice to meet you</h1>
+	}
 }
